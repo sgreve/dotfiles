@@ -15,6 +15,7 @@ alias update.="gaa && gcm 'Update dotfiles' && gpo master"
 
 # Arch
 alias ya="yaourt  --nameonly --pager --color --noconfirm $1"
+alias yau="yaourt -Syu --aur --color"
 
 # Files
 alias l="ls -o -hX --group-directories-first"
