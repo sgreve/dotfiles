@@ -3,7 +3,7 @@ source /usr/share/zsh/scripts/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle jump
 
-antigen theme honukai
+antigen theme https://github.com/oskarkrawczyk/honukai-iterm-zsh honukai
 
 antigen apply
 
