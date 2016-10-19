@@ -23,6 +23,8 @@ alias la="ls -o -AhX --group-directories-first"
 alias v='nvim'
 alias vim='nvim'
 
+alias ssh="TERM=screen ssh"
+
 # Config
 alias termiteconf="nvim ~/.config/termite/config"
 alias zshrc="nvim ~/.zshrc && source ~/.zshrc"
