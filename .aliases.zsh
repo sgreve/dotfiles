@@ -11,7 +11,8 @@ alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 alias glo="git log --oneline"
 alias grhh="git reset --hard HEAD"
 alias gcp="git cherry-pick $1"
-alias update.="gaa && gcm 'Update dotfiles' && gpo master"
+alias update.="gaa && gcm 'Update dotfiles' && gpo main"
 
 # Generic
 alias ls="exa -lBhmbU"
+alias vim="nvim"
