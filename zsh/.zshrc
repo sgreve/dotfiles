@@ -8,9 +8,9 @@ fi
 # Antidote 
 [[ -e $DOTFILES/.antidote ]] || git clone https://github.com/mattmc3/antidote.git $DOTFILES/.antidote
 source "$DOTFILES/.antidote/antidote.zsh"
-antidote load $DOTFILES/.zsh_plugins.zsh
+antidote load $HOME/.zsh_plugins.zsh
 setopt prompt_subst
 
 # Load the rest
-source "$DOTFILES/.aliases.zsh"
-source "$DOTFILES/.export.zsh"
+source "$HOME/.aliases.zsh"
+source "$HOME/.export.zsh"
