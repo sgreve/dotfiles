@@ -1,0 +1,38 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/svengreve/.zsh/completions:"* ]]; then export FPATH="/Users/svengreve/.zsh/completions:$FPATH"; fi
+# Pre-Check
+if [[ -e $HOME/dotfiles ]]; then
+	DOTFILES=$HOME/dotfiles
+else
+	echo "dotfiles dir not found, please use git clone --recursive inside your home dir" >&2
+fi 
+
+# Antidote 
+[[ -e $DOTFILES/.antidote ]] || git clone https://github.com/mattmc3/antidote.git $DOTFILES/.antidote
+source "$DOTFILES/.antidote/antidote.zsh"
+antidote load $HOME/.zsh_plugins.zsh
+setopt prompt_subst
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Load the rest
+source "$HOME/.aliases.zsh"
+source "$HOME/.export.zsh"
+
+# Created by `pipx` on 2024-06-17 23:10:03
+export PATH="$PATH:/Users/svengreve/.local/bin"
+. "/Users/svengreve/.deno/env"
+# bun completions
+[ -s "/Users/svengreve/.bun/_bun" ] && source "/Users/svengreve/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/svengreve/.lmstudio/bin"
+# End of LM Studio CLI section
+
