@@ -14,5 +14,5 @@ alias gcp="git cherry-pick $1"
 alias update.="gaa && gcm 'Update dotfiles' && gpo main"
 
 # Generic
-alias ls="exa -lBhmbU"
+alias ls="eza -lBhmbU"
 alias vim="nvim"
